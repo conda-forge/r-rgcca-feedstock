@@ -13,9 +13,9 @@ source:
   sha256: 20f341fca8f616c556699790814debdf2ac7aa4dd9ace2071100c66af1549d7d
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,8 +45,7 @@ about:
     (i) to study the relationships between blocks and (ii) to identify subsets of variables
     of each block which are active in their relationships with the other blocks. '
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
