@@ -26,12 +26,26 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-caret
     - r-deriv
+    - r-ggplot2 >=3.4.0
+    - r-ggrepel
+    - r-gridextra
     - r-mass
+    - r-matrixstats
+    - r-pbapply
+    - r-rlang
   run:
     - r-base
+    - r-caret
     - r-deriv
+    - r-ggplot2 >=3.4.0
+    - r-ggrepel
+    - r-gridextra
     - r-mass
+    - r-matrixstats
+    - r-pbapply
+    - r-rlang
 
 test:
   commands:
@@ -39,12 +53,14 @@ test:
     - "\"%R%\" -e \"library('RGCCA')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=RGCCA
+  home: https://rgcca-factory.github.io/RGCCA/
+  dev_url: https://github.com/rgcca-factory/RGCCA
   license: GPL-2.0-or-later
   summary: 'Multiblock data analysis concerns the analysis of several sets of variables (blocks) observed on the same group of individuals. The main aims of the RGCCA package are: (i) to study the relationships between blocks and (ii) to identify subsets of variables of each block which are active in their relationships
     with the other blocks. '
   license_family: GPL3
   license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
