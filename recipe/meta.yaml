@@ -1,4 +1,4 @@
-{% set version = '2.1.2' %}
+{% set version = "3.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RGCCA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RGCCA/RGCCA_{{ version }}.tar.gz
-  sha256: 20f341fca8f616c556699790814debdf2ac7aa4dd9ace2071100c66af1549d7d
+  sha256: 80b61c0e39836d4c039dac54b0cc8a40d55dad58621f6c03c98742507d929132
 
 build:
-  merge_build_host: True  # [win]
-  number: 1003
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -41,10 +41,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=RGCCA
   license: GPL-2.0-or-later
-  summary: 'Multiblock data analysis concerns the analysis of several sets of variables (blocks)
-    observed on the same group of individuals. The main aims of the RGCCA package are:
-    (i) to study the relationships between blocks and (ii) to identify subsets of variables
-    of each block which are active in their relationships with the other blocks. '
+  summary: 'Multiblock data analysis concerns the analysis of several sets of variables (blocks) observed on the same group of individuals. The main aims of the RGCCA package are: (i) to study the relationships between blocks and (ii) to identify subsets of variables of each block which are active in their relationships
+    with the other blocks. '
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
