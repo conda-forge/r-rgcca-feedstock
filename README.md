@@ -1,11 +1,11 @@
-About r-rgcca
-=============
+About r-rgcca-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rgcca-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=RGCCA
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rgcca-feedstock/blob/main/LICENSE.txt)
 
 Summary: Multiblock data analysis concerns the analysis of several sets of variables (blocks) observed on the same group of individuals. The main aims of the RGCCA package are: (i) to study the relationships between blocks and (ii) to identify subsets of variables of each block which are active in their relationships with the other blocks. 
 
