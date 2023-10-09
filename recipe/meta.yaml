@@ -1,4 +1,4 @@
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RGCCA_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RGCCA/RGCCA_{{ version }}.tar.gz
-  sha256: 6da7b472b8d54defa5bf0d5de4c0dd8ecba112760bd3798ab1b37cf941f1bbc5
+  sha256: c965e9d106f0954ce940314e4d5d3f8f0f57b7fc5c5c8cbe913e43a9a3953f83
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
